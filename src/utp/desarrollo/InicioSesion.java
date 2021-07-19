@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import proyectof1.RegistrarActivo;
 
 /**
  *
@@ -135,7 +136,8 @@ public class InicioSesion extends javax.swing.JFrame {
                 try {
                     if(obj.validarUsuario(receptor,contra) == true){
                         JOptionPane.showMessageDialog(null,"Inicio de se sesion exitoso");
-                        Producots verform = new Producots();
+                        RegistrarActivo verform = new RegistrarActivo();
+//                        Producots verform = new Producots();
                         verform.setVisible(true);
                     } else{
                         JOptionPane.showMessageDialog(null,"Sus datos no coinciden");

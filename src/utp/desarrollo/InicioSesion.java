@@ -66,7 +66,6 @@ public class InicioSesion extends javax.swing.JFrame {
             }
         });
 
-        jPassContra.setText("jPasswordField1");
         jPassContra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPassContraActionPerformed(evt);

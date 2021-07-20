@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +13,8 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import utp.desarrollo.ConectarBaseDeDatos;
 import utp.desarrollo.Hash;
-import utp.desarrollo.producto.RegistrarActivo;
+import utp.desarrollo.PantallaDos;
+import utp.desarrollo.iniciosesion.Mensaje;
 
 /**
  *
@@ -136,17 +138,20 @@ public class InicioSesion extends javax.swing.JFrame {
                 Validacion obj = new Validacion();
                 Mensaje obj2 = new Mensaje();
                 try {
-                    if(obj.validarUsuario(receptor,contra) == true){
-                        JOptionPane.showMessageDialog(null,"Inicio de se sesion exitoso");
-                        RegistrarActivo verform = new RegistrarActivo();
-//                        Producots verform = new Producots();
-                        verform.setVisible(true);
-                    } else{
-                        JOptionPane.showMessageDialog(null,"Sus datos no coinciden");
-                        error++;
-                        if(error == 3){
-                            obj2.MensajeError(receptor);
-                        }
+                    switch (obj.validarUsuario(receptor,contra)) {
+                        case 2:
+                            PantallaDos verform = new PantallaDos();
+                            verform.setVisible(true);
+                            break;
+                        case 3:
+                            JOptionPane.showMessageDialog(null,"Sus datos no coinciden");
+                            error++;
+                            if(error == 3){
+                                obj2.MensajeError(receptor);
+                            }   break;
+                        default:
+                            JOptionPane.showMessageDialog(null,"Usuario no encontrado");
+                            break;
                     }
                     
                 } catch (IOException ex) {

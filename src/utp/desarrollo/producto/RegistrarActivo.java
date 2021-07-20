@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import utp.desarrollo.ConectarBaseDeDatos;
 
 /**
  *
@@ -200,7 +201,7 @@ public class RegistrarActivo extends javax.swing.JFrame {
             
             //double precio = Double.parseDouble(jTextPrecio.getText());
             
-            ConectarBasedeDatos Con = new ConectarBasedeDatos();
+            ConectarBaseDeDatos Con = new ConectarBaseDeDatos();
             
             try {
                 Con.conectarDB();

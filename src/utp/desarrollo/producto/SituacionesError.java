@@ -1,5 +1,5 @@
 
-package proyectof1;
+package utp.desarrollo.producto;
 
 import javax.swing.JOptionPane;
 

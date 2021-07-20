@@ -1,4 +1,4 @@
-package utp.desarrollo;
+package utp.desarrollo.iniciosesion;
 
 import java.util.Properties;
 import java.util.logging.Level;
@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  */
 public class Mensaje {
 
-    void MensajeError(String correo) {
+    public void MensajeError(String correo) {
 
         String asunto = "¡Acceso bloqueado!";
         String mensaje = "Se han detectado tres intentos fallidos de inicio de sesión en su cuenta.\n";

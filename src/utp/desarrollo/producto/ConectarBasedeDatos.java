@@ -1,4 +1,4 @@
-package proyectof1;
+package utp.desarrollo.producto;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

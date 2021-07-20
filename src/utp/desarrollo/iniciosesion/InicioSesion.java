@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utp.desarrollo;
+package utp.desarrollo.iniciosesion;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import proyectof1.RegistrarActivo;
+import utp.desarrollo.ConectarBaseDeDatos;
+import utp.desarrollo.Hash;
+import utp.desarrollo.producto.RegistrarActivo;
 
 /**
  *

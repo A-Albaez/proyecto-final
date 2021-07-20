@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyectof1;
+package utp.desarrollo.producto;
 
 import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import java.sql.PreparedStatement;

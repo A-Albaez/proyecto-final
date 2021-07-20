@@ -1,9 +1,10 @@
-package utp.desarrollo;
+package utp.desarrollo.iniciosesion;
 
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import utp.desarrollo.ConectarBaseDeDatos;
 
 /**
  *

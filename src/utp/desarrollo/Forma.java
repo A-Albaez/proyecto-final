@@ -5,6 +5,9 @@
  */
 package utp.desarrollo;
 
+import utp.desarrollo.registrousuario.Registro;
+import utp.desarrollo.iniciosesion.InicioSesion;
+
 
 
 /**

@@ -1,4 +1,4 @@
-package utp.desarrollo;
+package utp.desarrollo.iniciosesion;
 
 import java.util.Properties;
 import java.util.logging.Level;

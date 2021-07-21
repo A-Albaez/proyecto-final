@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyectof1;
+package utp.desarrollo.producto;
 
 import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import java.sql.PreparedStatement;
@@ -47,8 +47,6 @@ public class RegistrarActivo extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jTextprecio = new javax.swing.JTextField();
 
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -91,11 +89,11 @@ public class RegistrarActivo extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 324, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 117, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
@@ -113,7 +111,7 @@ public class RegistrarActivo extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,27 +130,18 @@ public class RegistrarActivo extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setBackground(new java.awt.Color(51, 153, 255));
-        jLabel3.setText("Precio");
-
-        jTextprecio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextprecioActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(53, 53, 53)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addGap(51, 51, 51))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,14 +149,13 @@ public class RegistrarActivo extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextAct, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                    .addComponent(jTextID)
-                    .addComponent(jTextcant, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                    .addComponent(jTextprecio))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextAct, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                        .addComponent(jTextID))
+                    .addComponent(jTextcant, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -186,19 +174,12 @@ public class RegistrarActivo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextcant, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextprecio)
-                        .addGap(3, 3, 3))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(Limpiar))
-                .addGap(47, 47, 47)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                    .addComponent(Limpiar)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -214,7 +195,7 @@ public class RegistrarActivo extends javax.swing.JFrame {
         String Activo = jTextAct.getText();
         
         String sql;
-        if(!Activo.equals("")&&!jTextcant.getText().equals("")&&!jTextID.getText().equals("")&&!jTextprecio.getText().equals(""))
+        if(!Activo.equals(""))
         {
             
             //double precio = Double.parseDouble(jTextPrecio.getText());
@@ -224,7 +205,7 @@ public class RegistrarActivo extends javax.swing.JFrame {
             try {
                 Con.conectarDB();
                 String datos [] = new String [1];
-                sql="SELECT COUNT(*) FROM inventario WHERE nombre =?";
+                sql="SELECT COUNT(*) FROM producto WHERE nombre =?";
                 
                 PreparedStatement ps = Con.conexion.prepareStatement(sql);
                 ps.setString(1,Activo);
@@ -240,18 +221,16 @@ public class RegistrarActivo extends javax.swing.JFrame {
                          
                   if (num == 0)
                          {
-                             
+                             if(!Activo.equals("")&&!jTextcant.getText().equals("")&&!jTextID.getText().equals(""))
+                             {
                             try{ 
                                 int  Cantidad = Integer.parseInt(jTextcant.getText());
                             int  ProducID = Integer.parseInt(jTextID.getText());
-                            double Precio = Double.parseDouble(jTextprecio.getText());
-                             sql="INSERT INTO inventario (id_producto, nombre, precio, cantidad, Activo) VALUES (?, ?, ?, ?, 1)";
-                             
+                             sql="INSERT INTO producto (Id_producto, nombre, cantidad_disponible) VALUES (?,?,?)";
                             ps=Con.conexion.prepareStatement(sql);
                              try{ps.setInt(1, ProducID);
                              ps.setString(2, Activo);
-                             ps.setDouble(3,Precio);
-                             ps.setInt(4, Cantidad);
+                             ps.setInt(3, Cantidad);
                              ps.executeUpdate();
                              JOptionPane.showMessageDialog(null,"Producto Agregado");
                              }catch(SQLException a)
@@ -261,20 +240,24 @@ public class RegistrarActivo extends javax.swing.JFrame {
                              
                              }catch(NumberFormatException ex)
                              {
-                                 String men=("Debe ingresar datos numericos \n en el campo ID , cantidad , Precio \n Gracias!!");
+                                 String men=("Debe ingresar datos numericos \n en el campo ID y cantidad \n Gracias!!");
                                  JOptionPane.showMessageDialog(null, men);
                              }
-                            
-                            
+                             }
+                             
+                             
+                             SituacionesError as = new SituacionesError();
+                             
+                             as.ErrorDatos(jTextAct.getText(),jTextcant.getText(),jTextID.getText());
+                             
+                    
                          }
-                         
                          else
                               JOptionPane.showMessageDialog(null,"El producto ya esta agregado en el sistema");
                              
 
                          Con.desconectarDB();
                   
-                         
             } catch (SQLException ex) {
                 Logger.getLogger(RegistrarActivo.class.getName()).log(Level.SEVERE, null, ex);
                 
@@ -286,10 +269,7 @@ public class RegistrarActivo extends javax.swing.JFrame {
             
             
         }else{
-             SituacionesError as = new SituacionesError();
-                             
-                             as.ErrorDatos(jTextAct.getText(),jTextcant.getText(),jTextID.getText(),jTextprecio.getText());
-               // JOptionPane.showMessageDialog(null,"Por favor debe llenar todos los campos"); 
+                JOptionPane.showMessageDialog(null,"Por favor debe llenar todos los campos"); 
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -304,10 +284,6 @@ public class RegistrarActivo extends javax.swing.JFrame {
        jTextcant.setText("");
        jTextID.setText("");
     }//GEN-LAST:event_LimpiarActionPerformed
-
-    private void jTextprecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextprecioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextprecioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -352,7 +328,6 @@ public class RegistrarActivo extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
@@ -362,6 +337,5 @@ public class RegistrarActivo extends javax.swing.JFrame {
     private javax.swing.JTextField jTextID;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextField jTextcant;
-    private javax.swing.JTextField jTextprecio;
     // End of variables declaration//GEN-END:variables
 }

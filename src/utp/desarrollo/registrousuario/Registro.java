@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import utp.desarrollo.ConectarBaseDeDatos;
 import utp.desarrollo.Hash;
+import utp.desarrollo.PantallaDos;
 
 /**
  *
@@ -215,7 +216,7 @@ public class Registro extends javax.swing.JFrame {
         String address = addressTextField.getText();
         String birthdate = birthdateTextField.getText();
         String email = emailTextField.getText();       
-        String password = Hash.md5(new String(passwordTextField.getPassword()));
+        String password = new String(passwordTextField.getPassword());
         String sql;                
         
         if (!isValidForm(name, phone, address, birthdate, email, password)) {
@@ -252,6 +253,9 @@ public class Registro extends javax.swing.JFrame {
                     ps.setString(5, address);
                     ps.setString(6, password);
                     ps.executeUpdate();
+                    
+                    PantallaDos verform = new PantallaDos();
+                    verform.setVisible(true);
                 } else
                     JOptionPane.showMessageDialog(null, "El usuario ya esta agregado en el sistema");
             } catch (SQLException ex) {

@@ -1,5 +1,7 @@
 package utp.desarrollo.registrousuario;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -214,19 +216,48 @@ public class Registro extends javax.swing.JFrame {
         String birthdate = birthdateTextField.getText();
         String email = emailTextField.getText();       
         String password = Hash.md5(new String(passwordTextField.getPassword()));
-        String sql;
+        String sql;                
         
         if (!isValidForm(name, phone, address, birthdate, email, password)) {
-            JOptionPane.showMessageDialog(null,"Por favor debe llenar todos los campos");
+            JOptionPane.showMessageDialog(null, "Por favor debe llenar todos los campos");
         } else {
-            ConectarBaseDeDatos connection = new ConectarBaseDeDatos();
+            ConectarBaseDeDatos connection = new ConectarBaseDeDatos();           
             
             try {
                 connection.conectarDB();                
+                String datos[] = new String[1];
+                sql = "SELECT COUNT(*) FROM usuarios WHERE correo =?";
+                
+                PreparedStatement ps = connection.conexion.prepareStatement(sql);
+                ps.setString(1, email);
+                try (ResultSet resultado = ps.executeQuery()) {
+                    resultado.last();
+                    resultado.beforeFirst();
+                    
+                    while (resultado.next()) {
+                        datos[0] = resultado.getString("COUNT(*)");
+                    }
+                }
+                
+                int num = Integer.parseInt(datos[0]);
+                if (num == 0) {
+                    sql = "INSERT INTO usuarios (nombre, fecha_nacimiento, correo, telefono, direccion, contrasena)"
+                            + " VALUES (?, ?, ?, ?, ?, ?)";
+                    ps = connection.conexion.prepareStatement(sql);
+                    
+                    ps.setString(1, name);
+                    ps.setString(2, birthdate);
+                    ps.setString(3, email);
+                    ps.setString(4, phone);
+                    ps.setString(5, address);
+                    ps.setString(6, password);
+                    ps.executeUpdate();
+                } else
+                    JOptionPane.showMessageDialog(null, "El usuario ya esta agregado en el sistema");
             } catch (SQLException ex) {
                 Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error desconocido. Intente más tarde");
-            }
+            }           
         }
     }//GEN-LAST:event_registerButtonActionPerformed
 

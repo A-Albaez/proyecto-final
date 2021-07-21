@@ -22,8 +22,8 @@ public class ConectarBaseDeDatos {
         try {
             Class.forName(controlador);
             //final String url_db= "jdbc:mysql://localhost:3306/farmaciaEGPH";
-            final String url_db= "jdbc:mysql://localhost:8036/farmaciaEGPH";
-            conexion=DriverManager.getConnection(url_db, "A_Albaez", "20010607");
+            final String url_db= "jdbc:mysql://localhost:3306/farmaciaEGPH";
+            conexion = DriverManager.getConnection(url_db, "hamilton", "]_9$SfT7f@)S-j4");
             //JOptionPane.showMessageDialog(null, "Conexion Establecida Correctamente");
         } catch (ClassNotFoundException | SQLException ex) {
             //Logger.getLogger(ConectarBasedeDatos.class.getName()).log(Level.SEVERE, null, ex);

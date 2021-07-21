@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import utp.desarrollo.ConectarBaseDeDatos;
 
 /**
  *
@@ -121,7 +122,7 @@ public class Inventario extends javax.swing.JFrame {
             DefaultTableModel modelo = new DefaultTableModel();
             String titulos[] ={"Id_producto","nombre","cantidad_disponible"};
             modelo=new DefaultTableModel(null,titulos);
-            ConectarBasedeDatos Con = new ConectarBasedeDatos();
+            ConectarBaseDeDatos Con = new ConectarBaseDeDatos();
             if(Integer.parseInt(cantidad_producto) == 1){
                 try {
                 Con.conectarDB();
